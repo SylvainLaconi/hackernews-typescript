@@ -31,13 +31,7 @@ export const LinkQuery = extendType({
       resolve(parent, args, context, info) {
         return links
       }
-    })
-  },
-});
-
-export const LinkByIdQuery = extendType({
-  type: "Query",
-  definition(t) {
+    }),
     t.field("feedById", {
       type: "Link",
       args: {
@@ -53,7 +47,7 @@ export const LinkByIdQuery = extendType({
       }
     })
   },
-})
+});
 
 export const LinkMutation = extendType({
   type: "Mutation",
@@ -80,13 +74,7 @@ export const LinkMutation = extendType({
 
         return link
       }
-    })
-  },
-});
-
-export const LinkUpdateMutation = extendType({
-  type: "Mutation",
-  definition(t) {
+    }),
     t.field("update", {
       type: "Link",
       args: {
@@ -116,13 +104,7 @@ export const LinkUpdateMutation = extendType({
         }
         return link
       }
-    })
-  },
-});
-
-export const LinkDeleteMutation = extendType({
-  type: "Mutation",
-  definition(t) {
+    }),
     t.field("delete", {
       type: "Link",
       args: {
@@ -143,5 +125,4 @@ export const LinkDeleteMutation = extendType({
       }
     })
   },
-})
-
+});
